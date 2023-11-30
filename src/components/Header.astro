@@ -2,6 +2,7 @@
 import Github from "../components/icons/GitHub";
 import { SITE_TITLE } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
+import ThemeToggle from "./ThemeToggle";
 ---
 
 <header>
@@ -12,7 +13,7 @@ import HeaderLink from "./HeaderLink.astro";
         <HeaderLink href="/">Home</HeaderLink>
         <HeaderLink href="/about">About</HeaderLink>
       </div>
-      <!-- <ThemeChanger /> -->
+      <ThemeToggle client:load />
       <a href="https://github.com/H-ymt/my-blog">
         <Github />
       </a>
