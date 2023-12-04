@@ -1,3 +1,4 @@
+import { Moon, Sun } from "lucide-react";
 import * as React from "react";
 
 export default function ThemeToggle() {
@@ -11,28 +12,22 @@ export default function ThemeToggle() {
   }, []);
 
   React.useEffect(() => {
-    const isDark =
-      theme === "dark" ||
-      (theme === "system" &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
+    const isDark = theme === "dark";
     document.documentElement.classList[isDark ? "add" : "remove"]("dark");
   }, [theme]);
+
+  const handleClick = () => {
+    setThemeState(theme === "theme-light" ? "dark" : "theme-light");
+  };
 
   return (
     <div className="flex gap-2">
       <button
         type="button"
-        onClick={() => setThemeState("theme-light")}
+        onClick={handleClick}
         className="text-black dark:text-white"
       >
-        Light
-      </button>
-      <button
-        type="button"
-        onClick={() => setThemeState("dark")}
-        className="text-black dark:text-white"
-      >
-        Dark
+        {theme === "theme-light" ? <Sun /> : <Moon />}
       </button>
     </div>
   );

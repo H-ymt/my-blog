@@ -9,6 +9,6 @@ const { pathname } = Astro.url;
 const isActive = href === pathname;
 ---
 
-<a href={href} class={`${isActive ? "text-black" : "text-muted"}`} {...props}>
+<a href={href} class={`${isActive ? "" : "text-muted"}`} {...props}>
   <slot />
 </a>
