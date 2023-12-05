@@ -28,20 +28,29 @@ export default function ThemeToggle() {
   return (
     <div className="flex gap-2">
       <div className="dropdown dropdown-end">
-        <div role="button" tabIndex={0} className="btn btn-ghost m-1 px-2 py-1">
+        <div role="button" tabIndex={0} className="btn btn-ghost py-1">
           {theme === "theme-light" ? <Sun /> : <Moon />}
         </div>
         <ul
           tabIndex={0}
-          className="menu dropdown-content z-[1] flex w-36 gap-2 rounded-lg border border-muted/20 px-4 py-3 text-base shadow [&>li]:cursor-pointer"
+          className="menu dropdown-content z-[1] flex w-36 rounded-lg border border-muted/20 px-1.5 py-1.5 text-base shadow [&>li]:cursor-pointer"
         >
-          <li onClick={() => setThemeState("theme-light")} className="gap-2">
+          <li
+            onClick={() => setThemeState("theme-light")}
+            className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
+          >
             Light
           </li>
-          <li onClick={() => setThemeState("dark")} className="gap-2">
+          <li
+            onClick={() => setThemeState("dark")}
+            className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
+          >
             Dark
           </li>
-          <li onClick={() => setThemeState("system")} className="gap-2">
+          <li
+            onClick={() => setThemeState("system")}
+            className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
+          >
             System
           </li>
         </ul>
