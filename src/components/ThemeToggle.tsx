@@ -30,7 +30,7 @@ export default function ThemeToggle() {
       <div className="dropdown dropdown-end">
         <div role="button" tabIndex={0} className="btn btn-ghost w-11 p-2">
           <span className="sr-only">テーマを切り替える</span>
-          {theme === "theme-light" ? <Sun size={22} /> : <Moon size={22} />}
+          {theme === "theme-light" ? <Sun size={20} /> : <Moon size={20} />}
         </div>
         <ul
           tabIndex={0}
