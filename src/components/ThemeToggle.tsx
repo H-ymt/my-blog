@@ -27,10 +27,18 @@ export default function ThemeToggle() {
 
   return (
     <div className="flex gap-2">
-      <div className="dropdown dropdown-end flex items-center">
-        <div role="button" tabIndex={0} className="btn btn-ghost btn-sm px-2">
+      <div className="dropdown dropdown-end">
+        <div
+          role="button"
+          tabIndex={0}
+          className="btn btn-ghost btn-sm flex items-center px-2"
+        >
           <span className="sr-only">テーマを切り替える</span>
-          {theme === "theme-light" ? <Sun size={20} /> : <Moon size={20} />}
+          {theme === "theme-light" ? (
+            <Sun size={20} strokeWidth={1.5} />
+          ) : (
+            <Moon size={20} strokeWidth={1.5} />
+          )}
         </div>
         <ul
           tabIndex={0}
