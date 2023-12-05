@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         primary: "rgb(var(--color-primary))",
         muted: "rgb(var(--color-muted))",
+        base: "rgb(var(--backgroundColor-default))",
       },
       gridTemplateColumns: {
         subgrid: "subgrid",
