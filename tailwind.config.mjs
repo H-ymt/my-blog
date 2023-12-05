@@ -9,8 +9,8 @@ module.exports = {
         mulish: ["Mulish", "sans-serif"],
       },
       colors: {
-        primary: "rgba(var(--color-primary))",
-        muted: "rgba(var(--color-muted))",
+        primary: "rgb(var(--color-primary))",
+        muted: "rgb(var(--color-muted))",
       },
       gridTemplateColumns: {
         subgrid: "subgrid",
