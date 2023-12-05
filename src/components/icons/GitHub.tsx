@@ -1,5 +1,5 @@
-import { LiaGithub } from "react-icons/lia";
+import { GithubIcon } from "lucide-react";
 
 export default function Github() {
-  return <LiaGithub size={32} />;
+  return <GithubIcon />;
 }
