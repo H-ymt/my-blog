@@ -33,10 +33,10 @@ const posts = (await getCollection("blog")).sort(
               <a href={`/blog/${post.slug}/`} class="grid-cols-subgrid gap-y-2">
                 <img
                   src={post.data.heroImage}
-                  width={960}
-                  height={480}
+                  width={500}
+                  height={400}
                   alt=""
-                  class="rounded-lg"
+                  class="aspect-[2/1.5] rounded-lg object-cover"
                   sizes="(min-width:640px) 50vw, 100vw"
                 />
                 <h2 class="pt-2 text-lg">{post.data.title}</h2>
