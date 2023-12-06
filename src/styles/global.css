@@ -9,7 +9,7 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: 51 51 51;
+  --color-primary: 70 69 69;
   --color-muted: 161 161 170;
   --backgroundColor-default: 255 255 255;
 }
@@ -17,9 +17,10 @@
 :root.dark {
   --color-primary: 250 250 250;
   --color-muted: 161 161 170;
-  --backgroundColor-default: 21 21 25;
+  --backgroundColor-default: 19 19 20;
 }
 
+html,
 body {
   color: var(--color-primary);
   background-color: rgba(var(--backgroundColor-default));

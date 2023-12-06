@@ -16,12 +16,14 @@ const posts = (await getCollection("blog")).sort(
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="min-h-[100vh] font-mulish text-primary">
+  <body class="min-h-[100vh] font-mulish">
     <Header title={SITE_TITLE} />
 
     <main>
       <Layout>
-        <h1 class="py-10 text-3xl">My Life and engineering knowledge blog</h1>
+        <h1 class="py-10 text-3xl font-medium text-white">
+          My Life and engineering knowledge blog
+        </h1>
         <p>
           Hi! I&apos;m Yamato.<br />This is a my blog made with Astro. where I
           share my experiences in life and engineering knowledge.
@@ -39,7 +41,7 @@ const posts = (await getCollection("blog")).sort(
                   class="aspect-[2/1.5] rounded-lg object-cover"
                   sizes="(min-width:640px) 50vw, 100vw"
                 />
-                <h2 class="pt-2 text-lg">{post.data.title}</h2>
+                <h2 class="pt-2 text-lg text-white">{post.data.title}</h2>
               </a>
             ))
           }

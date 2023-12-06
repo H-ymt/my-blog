@@ -31,7 +31,7 @@ export default function ThemeToggle() {
         <div
           role="button"
           tabIndex={0}
-          className="btn btn-ghost btn-sm flex items-center px-2"
+          className="btn btn-ghost btn-sm flex items-center px-2 text-primary"
         >
           <span className="sr-only">テーマを切り替える</span>
           {theme === "theme-light" ? (
