@@ -1,3 +1,4 @@
+import { Menu } from "@headlessui/react";
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -26,44 +27,49 @@ export default function ThemeToggle() {
   }, [theme]);
 
   return (
-    <div className="flex gap-2">
-      <div className="dropdown dropdown-end">
-        <div
-          role="button"
-          tabIndex={0}
-          className="btn btn-ghost btn-sm flex items-center px-2 text-primary"
-        >
-          <span className="sr-only">テーマを切り替える</span>
-          {theme === "theme-light" ? (
-            <Sun size={20} strokeWidth={1.5} />
-          ) : (
-            <Moon size={20} strokeWidth={1.5} />
-          )}
-        </div>
-        <ul
-          tabIndex={0}
-          className="menu dropdown-content z-[1] flex w-36 rounded-lg border border-muted/20 bg-base px-1.5 py-1.5 text-base text-primary shadow [&>li]:cursor-pointer"
-        >
-          <li
-            onClick={() => setThemeState("theme-light")}
-            className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
+    <div>
+      <Menu as="div" className="relative">
+        <Menu.Button>
+          <div
+            role="button"
+            tabIndex={0}
+            className="flex items-center px-2 text-primary"
           >
-            Light
-          </li>
-          <li
-            onClick={() => setThemeState("dark")}
-            className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
-          >
-            Dark
-          </li>
-          <li
-            onClick={() => setThemeState("system")}
-            className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
-          >
-            System
-          </li>
-        </ul>
-      </div>
+            <span className="sr-only">テーマを切り替える</span>
+            {theme === "theme-light" ? (
+              <Sun size={20} strokeWidth={1.5} />
+            ) : (
+              <Moon size={20} strokeWidth={1.5} />
+            )}
+          </div>
+        </Menu.Button>
+        <Menu.Items className="absolute right-0 mt-2 w-32 rounded-md [&>li]:cursor-pointer border border-muted py-2 px-1.5">
+          <Menu.Item>
+            <li
+              onClick={() => setThemeState("theme-light")}
+              className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
+            >
+              Light
+            </li>
+          </Menu.Item>
+          <Menu.Item>
+            <li
+              onClick={() => setThemeState("dark")}
+              className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
+            >
+              Dark
+            </li>
+          </Menu.Item>
+          <Menu.Item>
+            <li
+              onClick={() => setThemeState("system")}
+              className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
+            >
+              System
+            </li>
+          </Menu.Item>
+        </Menu.Items>
+      </Menu>
     </div>
   );
 }
