@@ -26,6 +26,9 @@ dependencies:
   '@headlessui/react':
     specifier: ^1.7.17
     version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+  '@shrutibalasa/tailwind-grid-auto-fit':
+    specifier: ^1.1.0
+    version: 1.1.0
   '@types/react':
     specifier: ^18.0.21
     version: 18.2.42
@@ -1191,6 +1194,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@shrutibalasa/tailwind-grid-auto-fit@1.1.0:
+    resolution: {integrity: sha512-sh/Vmdz/xTVziUF9ZYDb5YpECApdK85KXSRIJY58GzmdUuum5QBE3jqDeNMjICEVaVOSrOnp+gqUWx8A9dmZjA==}
+    dev: false
 
   /@types/acorn@4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}

@@ -22,7 +22,7 @@ const posts = (await getCollection("blog")).sort(
 
     <main>
       <Layout>
-        <h1 class="py-10 text-3xl font-medium text-white">
+        <h1 class="text-foreground py-10 text-3xl font-medium">
           Engineering knowledge blog
         </h1>
         <p>
@@ -30,20 +30,25 @@ const posts = (await getCollection("blog")).sort(
           share my experiences in life and engineering knowledge.
         </p>
 
-        <div class="grid gap-10 py-10 sm:grid-cols-2">
+        <div class="grid-auto-fit-md grid max-w-3xl gap-x-8 gap-y-10 py-10">
           {
             posts.map((post) => (
-              <a href={`/blog/${post.slug}/`} class="grid-cols-subgrid gap-y-2">
-                <img
-                  src={post.data.heroImage}
-                  width={500}
-                  height={400}
-                  alt=""
-                  class="aspect-[2/1.5] rounded-lg object-cover"
-                  sizes="(min-width:640px) 50vw, 100vw"
-                />
-                <h2 class="pt-2 text-lg text-white">{post.data.title}</h2>
-              </a>
+              <>
+                <a
+                  href={`/blog/${post.slug}/`}
+                  class="grid-rows-subgrid row-span-4 grid max-w-sm gap-y-2"
+                >
+                  <img
+                    src={post.data.heroImage}
+                    width={500}
+                    height={400}
+                    alt=""
+                    class="shadow-l aspect-[2/1.5] rounded-lg object-cover"
+                    sizes="(min-width:640px) 50vw, 100vw"
+                  />
+                  <h2 class="text-foreground text-lg">{post.data.title}</h2>
+                </a>
+              </>
             ))
           }
         </div>

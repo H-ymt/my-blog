@@ -30,11 +30,7 @@ export default function ThemeToggle() {
     <div>
       <Menu as="div" className="relative">
         <Menu.Button>
-          <div
-            role="button"
-            tabIndex={0}
-            className="flex items-center px-2 text-primary"
-          >
+          <div role="button" tabIndex={0} className="flex items-center px-2">
             <span className="sr-only">テーマを切り替える</span>
             {theme === "theme-light" ? (
               <Sun size={20} strokeWidth={1.5} />
@@ -43,11 +39,11 @@ export default function ThemeToggle() {
             )}
           </div>
         </Menu.Button>
-        <Menu.Items className="absolute right-0 mt-2 w-32 rounded-md [&>li]:cursor-pointer border border-muted py-2 px-1.5">
+        <Menu.Items className="bg-background border-border absolute right-0 mt-2 w-32 rounded-md border px-1.5 py-2 text-sm [&>li]:cursor-pointer">
           <Menu.Item>
             <li
               onClick={() => setThemeState("theme-light")}
-              className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
+              className="gap-2 rounded p-1 px-2 hover:bg-muted"
             >
               Light
             </li>
@@ -55,7 +51,7 @@ export default function ThemeToggle() {
           <Menu.Item>
             <li
               onClick={() => setThemeState("dark")}
-              className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
+              className="gap-2 rounded p-1 px-2 hover:bg-muted"
             >
               Dark
             </li>
@@ -63,7 +59,7 @@ export default function ThemeToggle() {
           <Menu.Item>
             <li
               onClick={() => setThemeState("system")}
-              className="gap-2 rounded p-1 px-2 hover:bg-muted/20"
+              className="gap-2 rounded p-1 px-2 hover:bg-muted"
             >
               System
             </li>
