@@ -59,6 +59,10 @@ body {
   background-color: hsl(var(--background));
 }
 
+h2 {
+  padding: 32px 0 4px;
+}
+
 li {
   list-style-type: none;
 }

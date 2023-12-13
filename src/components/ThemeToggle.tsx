@@ -39,7 +39,7 @@ export default function ThemeToggle() {
             )}
           </div>
         </Menu.Button>
-        <Menu.Items className="bg-background border-border absolute right-0 mt-2 w-32 rounded-md border px-1.5 py-2 text-sm [&>li]:cursor-pointer">
+        <Menu.Items className="bg-background border-border absolute right-0 mt-2 w-32 rounded-lg border px-1.5 py-2 text-sm [&>li]:cursor-pointer">
           <Menu.Item>
             <li
               onClick={() => setThemeState("theme-light")}
